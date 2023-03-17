@@ -11,4 +11,8 @@ public class hello {
     public String GetHello(){
         return "good";
     }
+    @GetMapping
+    public String GetPet(){
+        return "cat";
+    }
 }
