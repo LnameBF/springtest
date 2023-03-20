@@ -6,5 +6,5 @@ import com.example.demo.domain.enity.Admin;
 
 
 public interface AdminService extends IService<Admin> {
-    public Result<Admin> getId(Integer id);
+     Result<Admin> getId(Integer id);
 }
