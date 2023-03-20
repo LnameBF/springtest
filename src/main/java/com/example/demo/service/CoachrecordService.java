@@ -6,6 +6,6 @@ import com.example.demo.domain.Coachrecord;
 import com.example.demo.domain.Result;
 
 public interface CoachrecordService extends IService<Coachrecord> {
-    public Result<Coachrecord> getId(String grand);
+    Result<Coachrecord> getId(String grand);
 
 }

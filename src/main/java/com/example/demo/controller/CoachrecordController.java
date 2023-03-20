@@ -3,6 +3,7 @@ package com.example.demo.controller;
 
 import com.example.demo.domain.Result;
 import com.example.demo.service.CoachrecordService;
+import com.example.demo.util.StateCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +16,8 @@ public class CoachrecordController {
 
     @GetMapping("{grade}")
     public Result selectByGrade(@PathVariable String grade){
-        return coachrecordService.getId(grade);
+        String message=coachrecordService.getId(grade)!=null ? "success" : "error";
+        Integer code= coachrecordService.getId(grade)!=null ? StateCode.Register_code_success : StateCode.Register_code_error;
+        return new Result(message,code,coachrecordService.getId(grade));
     }
 }
