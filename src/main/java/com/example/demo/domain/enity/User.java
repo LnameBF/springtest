@@ -1,10 +1,10 @@
-package com.example.demo.domain;
+package com.example.demo.domain.enity;
 
-public class Pet {
+public class User {
     private String name;
     private Integer age;
 
-    public Pet(String name, Integer age) {
+    public User(String name, Integer age) {
         this.name = name;
         this.age = age;
     }
